@@ -1,0 +1,72 @@
+/* Page background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 1rem; /* small padding so card doesn't touch edges on tiny screens */
+}
+
+/* Card styling */
+.card {
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 700px; /* larger max width for desktops */
+    box-sizing: border-box; /* ensure padding included in width */
+}
+
+/* Container for links */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    align-items: stretch; /* make links take full width of container */
+}
+
+/* Individual link cards */
+.link-card {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    width: 100%; /* full width of parent */
+}
+
+/* Hover effect */
+.link-card:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Specific colors for each link */
+.github { background-color: #24292f; }
+.live { background-color: #28a745; }
+.login { background-color: #ffc107; color: #000; }
+.register { background-color: #17a2b8; }
+
+/* Responsive: horizontal links on medium+ screens */
+@media (min-width: 768px) {
+    .links {
+        flex-direction: row; /* horizontal */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link-card {
+        width: auto; /* allow buttons to shrink to their content */
+        min-width: 120px; /* optional: prevent buttons from being too small */
+    }
+}

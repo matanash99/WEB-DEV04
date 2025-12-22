@@ -1,0 +1,10 @@
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.register-card {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #ffffff;
+}

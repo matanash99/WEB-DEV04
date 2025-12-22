@@ -1,0 +1,106 @@
+/* ---------- BODY ---------- */
+body {
+    background-color: #f8f9fa; /* light gray, matches other pages */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* ---------- SIDEBAR ---------- */
+#playlistList {
+    max-height: 60vh;
+    overflow-y: auto;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+#playlistList .list-group-item.active {
+    background-color: #6f42c1; /* purple like play button */
+    color: #fff;
+    font-weight: bold;
+}
+
+#playlistList .list-group-item {
+    cursor: pointer;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn-purple {
+    background-color: #6f42c1;
+    color: #fff;
+    border: none;
+}
+.btn-purple:hover {
+    background-color: #5a35a1;
+    color: #fff;
+}
+
+#newPlaylistBtn {
+    font-weight: bold;
+}
+
+/* ---------- VIDEO CARDS ---------- */
+.card {
+    border-radius: 0.75rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: scale(1.02);
+    transition: 0.2s;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* ---------- STAR RATINGS ---------- */
+.star-rating {
+    display: flex;
+    gap: 2px;
+    cursor: pointer;
+    max-width: 120px;
+}
+
+.star-rating .star {
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
+}
+
+.star-rating .star.text-warning {
+    color: #ffc107;
+}
+
+/* ---------- SEARCH & SORT ---------- */
+#playlistSearchInput {
+    border-radius: 0.5rem;
+}
+
+#sortAlphaBtn, #sortRatingBtn {
+    min-width: 130px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600x) {
+    #playlistList {
+        max-height: 200px;
+        margin-bottom: 1rem;
+    }
+}
+
+
+#playerWrapper {
+    background: #111;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+#nowPlaying {
+    color: #ddd;
+}
